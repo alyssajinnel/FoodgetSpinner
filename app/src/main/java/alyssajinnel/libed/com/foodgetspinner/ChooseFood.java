@@ -13,24 +13,6 @@ public class ChooseFood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.choosefood);
 
-        Button plusBtn3= (Button) findViewById(R.id.plusBtn3);
-        plusBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent moveSecond = new Intent(getApplicationContext(), AddDiner.class);
-                startActivity(moveSecond);
-            }
-        });
-
-        Button viewBtn3 = (Button) findViewById(R.id.viewBtn3);
-        viewBtn3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent moveView = new Intent(getApplicationContext(), dinerList.class);
-                startActivity(moveView);
-            }
-        });
-
 
         Button ricemeal = (Button) findViewById(R.id.ricemeal);
         ricemeal.setOnClickListener(new View.OnClickListener() {

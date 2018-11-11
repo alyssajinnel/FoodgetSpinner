@@ -34,11 +34,11 @@ public class dinerList extends AppCompatActivity {
         Cursor data = mDatabaseHelper.getData();
         ArrayList<String> listData = new ArrayList<>();
         String data1;
-        listData.add("LOCATION     TYPE       DINER     PRICE RANGE");
+        listData.add("LOCATION    TYPE      DINER     PRICE RANGE");
         while(data.moveToNext()){
             //get the value from the database in column 1
             //then add it to the ArrayList
-            data1 = data.getString(1)+ "        " + data.getString(2) + "     " + data.getString(3)+ "     " + data.getString(4);
+            data1 = data.getString(1)+ "     " + data.getString(2) + "     " + data.getString(3)+ "     " + data.getString(4);
             listData.add(data1);
         }
         //create the list adapter and set the adapter

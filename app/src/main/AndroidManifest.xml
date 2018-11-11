@@ -22,6 +22,8 @@
         <activity android:name=".ChooseFood"/>
         <activity android:name=".ChoosePlace"/>
         <activity android:name=".Results"/>
+        <activity android:name=".ChooseBudget"/>
+        <activity android:name=".Spinner"/>
     </application>
 
 </manifest>

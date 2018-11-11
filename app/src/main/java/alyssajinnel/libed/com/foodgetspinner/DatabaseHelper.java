@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.widget.EditText;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -17,7 +18,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String column3 = "type";
     private static final String column4 = "dinername";
     private static final String column5 = "pricerange";
-
+    private EditText dinerEditText2;
+    private  String diner1;
 
 
     public DatabaseHelper(Context context) {
@@ -151,6 +153,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String query = "SELECT * FROM " + TABLE_NAME+ " WHERE " + column5 + " = '100++'" ;
         Cursor res1 = db.rawQuery(query, null);
         return res1;
+    }
+
+    public Cursor getSearch(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        diner1 =  dinerEditText2.getText().toString();
+        String query = "SELECT * FROM " + TABLE_NAME+ " WHERE " + column4 + " = '" + diner1 + "'";
+        Cursor res = db.rawQuery(query, null);
+        return res;
     }
 
 

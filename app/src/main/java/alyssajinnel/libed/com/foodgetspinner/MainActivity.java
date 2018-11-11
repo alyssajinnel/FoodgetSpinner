@@ -11,20 +11,22 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.main);
 
 
-        Button button = (Button) findViewById(R.id.budget1);
-        button.setOnClickListener(new View.OnClickListener() {
+       /** Button searchBtn0 = (Button) findViewById(R.id.searchBtn0);
+        searchBtn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent moveSecond = new Intent(getApplicationContext(), ChooseFood.class);
+                Intent moveSecond = new Intent(getApplicationContext(), viewAct.class);
                 startActivity(moveSecond);
             }
         });
 
-        Button plusBtn= (Button) findViewById(R.id.plusBtn);
-        plusBtn.setOnClickListener(new View.OnClickListener() {
+        **/
+
+        Button plusBtn0 = (Button) findViewById(R.id.plusBtn0);
+        plusBtn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent moveSecond = new Intent(getApplicationContext(), AddDiner.class);
@@ -32,13 +34,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button viewBtn = (Button) findViewById(R.id.viewBtn);
-        viewBtn.setOnClickListener(new View.OnClickListener() {
+        Button viewBtn0 = (Button) findViewById(R.id.viewBtn0);
+        viewBtn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent moveView = new Intent(getApplicationContext(), dinerList.class);
                 startActivity(moveView);
             }
         });
+
+        Button chooseBtn0 = (Button) findViewById(R.id.chooseBtn0);
+        chooseBtn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveView = new Intent(getApplicationContext(), ChooseBudget.class);
+                startActivity(moveView);
+            }
+        });
+
+        Button spinner0 = (Button) findViewById(R.id.spinner0);
+        spinner0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent moveView = new Intent(getApplicationContext(), Spinner.class);
+                startActivity(moveView);
+            }
+        });
     }
 }
+
+
+///recycler view

@@ -28,7 +28,7 @@ public class AddDiner extends AppCompatActivity {
 
         saveBtn = (Button)findViewById(R.id.saveBtn);
         nextBtn = (Button)findViewById(R.id.nextBtn);
-        updateBtn = (Button)findViewById(R.id.updateBtn);
+     //   updateBtn = (Button)findViewById(R.id.updateBtn);
         locEditText = (EditText)findViewById(R.id.locEditText);
         typeEditText = (EditText)findViewById(R.id.typeEditText);
         dinerEditText = (EditText)findViewById(R.id.dinerEditText);
@@ -75,13 +75,13 @@ public class AddDiner extends AppCompatActivity {
                 startActivity(moveView);
             }
         });
-        updateBtn.setOnClickListener(new View.OnClickListener() {
+        /**updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent moveView1 = new Intent(getApplicationContext(), viewAct.class);
                 startActivity(moveView1);
             }
-        });
+        });**/
     }
 
     public void AddData1(String item1, String item2, String item3, String item4) {

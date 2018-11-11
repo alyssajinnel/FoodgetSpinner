@@ -13,23 +13,6 @@ public class ChoosePlace extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chooseplace);
 
-        Button plusBtn2= (Button) findViewById(R.id.plusBtn2);
-        plusBtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent moveSecond = new Intent(getApplicationContext(), AddDiner.class);
-                startActivity(moveSecond);
-            }
-        });
-
-        Button viewBtn2 = (Button) findViewById(R.id.viewBtn2);
-        viewBtn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent moveView = new Intent(getApplicationContext(), dinerList.class);
-                startActivity(moveView);
-            }
-        });
 
         Button Espana = (Button) findViewById(R.id.Espana);
         Espana.setOnClickListener(new View.OnClickListener() {
